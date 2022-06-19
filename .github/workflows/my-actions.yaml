@@ -3,6 +3,6 @@ on: push # or [push, pull_request]
 jobs:
   job-1:
   name: First Job # display name
-  runs: ubunto-latest
+  runs-on: ubuntu-latest
   steps:
     - run echo "The event name is ${{github.event_name}}."
