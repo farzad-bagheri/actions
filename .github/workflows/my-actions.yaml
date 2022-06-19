@@ -10,4 +10,9 @@ jobs:
       - name: conditional action
         if: ${{github.event_name == 'push'}}
         run: echo "Yes, it is!"
-       
+  job-2:
+    name: Second Job
+    runs-on: ubuntu-latest
+    needs: job-1
+    steps:
+      - run: echo "This is the second job."
