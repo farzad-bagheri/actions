@@ -5,4 +5,4 @@ jobs:
     name: First Job # display name
     runs-on: ubuntu-latest
     steps:
-      - run: echo "The event name is ."
+      - run: echo "The event name is ${{ github.event_name }}."
