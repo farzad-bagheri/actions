@@ -5,8 +5,6 @@ jobs:
     name: First Job # display name
     runs-on: ubuntu-latest
     steps:
-      - run: echo "The event name is ${{ github.event_name }}."
-      - run: echo "${{runner.os}}, branch is ${{ github.ref }} ${{ github.repository }}."
-      - name: checkout repository code
-        uses: actions/checkout@v2
+      - run: echo "The event name is ${{github.workspace}}."
+      - run: ls ${{github.workspace}}
        
